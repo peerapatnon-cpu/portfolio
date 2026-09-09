@@ -1,3 +1,130 @@
-<h1>
- <p>นายพีรภัทร โนนใหญ่ 68402357</p>
-</h1>
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - นายพีรภัทร โนนใหญ่</title>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Prompt', sans-serif;
+            background-color: #f0f2f5;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .portfolio-card {
+            background: #ffffff;
+            max-width: 600px;
+            width: 90%;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            margin: 40px 0;
+        }
+        .header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: #ffffff;
+            text-align: center;
+            padding: 40px 20px 20px;
+        }
+        .profile-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 6px solid #ffffff;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            margin-bottom: 15px;
+        }
+        .header h1 {
+            margin: 10px 0 5px;
+            font-size: 28px;
+            font-weight: 600;
+        }
+        .header p {
+            margin: 0;
+            font-size: 16px;
+            color: #d1dfec;
+        }
+        .content {
+            padding: 30px 40px;
+        }
+        .section {
+            margin-bottom: 25px;
+        }
+        .section h2 {
+            color: #1e3c72;
+            font-size: 20px;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 8px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .info-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .info-list li {
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+        .emoji {
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="portfolio-card">
+        <!-- ส่วนหัวและรูปโปรไฟล์ -->
+        <div class="header">
+            <img src="Lamine yamal.jpg" alt="รูปโปรไฟล์ พีรภัทร" class="profile-img">
+            <h1>นายพีรภัทร โนนใหญ่</h1>
+            <p>คณะเทคโนโลยีสารสนเทศ สาขานวัตกรรมดิจิทัล</p>
+        </div>
+
+        <!-- ส่วนเนื้อหาข้อมูล -->
+        <div class="content">
+            <!-- ส่วนการศึกษา -->
+            <div class="section">
+                <h2>🎓 ข้อมูลการศึกษา</h2>
+                <ul class="info-list">
+                    <li>ปัจจุบันกำลังศึกษาอยู่ที่คณะเทคโนโลยีสารสนเทศ</li>
+                    <li><strong>สาขาวิชา:</strong> นวัตกรรมดิจิทัล</li>
+                </ul>
+            </div>
+
+            <!-- ส่วนความสามารถ -->
+            <div class="section">
+                <h2>⚽ ความสามารถพิเศษ</h2>
+                <ul class="info-list">
+                    <li><span class="emoji">🏃‍♂️</span> เล่นกีฬาฟุตซอล (Futsal)</li>
+                    <li><span class="emoji">⚽</span> เล่นกีฬาฟุตบอล (Football)</li>
+                </ul>
+            </div>
+
+            <!-- ส่วนงานอดิเรก -->
+            <div class="section">
+                <h2>🎮 งานอดิเรก (Hobbies)</h2>
+                <ul class="info-list">
+                    <li><span class="emoji">👾</span> เล่นเกม (Gaming)</li>
+                    <li><span class="emoji">💤</span> นอนหลับพักผ่อน (Sleeping)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
