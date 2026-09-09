@@ -3,125 +3,183 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - นายพีรภัทร โนนใหญ่</title>
-    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Portfolio - พีรภัทร โนนใหญ่</title>
+    <!-- นำเข้าฟอนต์ Prompt จาก Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- นำเข้า FontAwesome สำหรับไอคอน -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <style>
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #1e40af;
+            --bg-color: #f3f4f6;
+            --text-color: #1f2937;
+            --card-bg: #ffffff;
+        }
+
         body {
             font-family: 'Prompt', sans-serif;
-            background-color: #f0f2f5;
-            color: #333;
+            background-color: var(--bg-color);
+            color: var(--text-color);
             margin: 0;
-            padding: 0;
+            padding: 20px;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
         }
+
         .portfolio-card {
-            background: #ffffff;
-            max-width: 600px;
-            width: 90%;
+            background-color: var(--card-bg);
+            width: 100%;
+            max-width: 500px;
             border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
             overflow: hidden;
-            margin: 40px 0;
-        }
-        .header {
-            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-            color: #ffffff;
             text-align: center;
-            padding: 40px 20px 20px;
+            transition: transform 0.3s ease;
         }
-        .profile-img {
-            width: 180px;
-            height: 180px;
+
+        .portfolio-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .header-bg {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            height: 120px;
+            width: 100%;
+        }
+
+        .profile-container {
+            margin-top: -75px;
+        }
+
+        .profile-pic {
+            width: 150px;
+            height: 150px;
             border-radius: 50%;
+            border: 5px solid var(--card-bg);
             object-fit: cover;
-            border: 6px solid #ffffff;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-            margin-bottom: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            background-color: #fff; /* สีพื้นหลังเผื่อรูปยังไม่โหลด */
         }
-        .header h1 {
-            margin: 10px 0 5px;
-            font-size: 28px;
-            font-weight: 600;
-        }
-        .header p {
-            margin: 0;
-            font-size: 16px;
-            color: #d1dfec;
-        }
+
         .content {
-            padding: 30px 40px;
+            padding: 20px 30px 40px;
         }
-        .section {
+
+        h1 {
+            margin: 10px 0 5px;
+            font-size: 24px;
+            color: #111827;
+        }
+
+        .faculty {
+            color: #6b7280;
+            font-size: 15px;
             margin-bottom: 25px;
+            font-weight: 400;
         }
-        .section h2 {
-            color: #1e3c72;
-            font-size: 20px;
-            border-bottom: 2px solid #e0e0e0;
-            padding-bottom: 8px;
+
+        .section-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-top: 20px;
             margin-bottom: 15px;
+            color: var(--primary-color);
+            text-align: left;
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 5px;
+        }
+
+        .list-items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: flex-start;
+        }
+
+        .badge {
+            background-color: #f3f4f6;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 14px;
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 8px;
+            color: #374151;
+            border: 1px solid #e5e7eb;
         }
-        .info-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        .info-list li {
-            font-size: 16px;
-            line-height: 1.8;
-            margin-bottom: 10px;
+
+        .contact-info {
+            margin-top: 30px;
             display: flex;
-            align-items: flex-start;
-            gap: 10px;
+            flex-direction: column;
+            gap: 15px;
         }
-        .emoji {
-            font-size: 20px;
+
+        .contact-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 12px;
+            border-radius: 10px;
+            text-decoration: none;
+            color: white;
+            font-weight: 500;
+            transition: opacity 0.2s;
+        }
+
+        .contact-btn:hover {
+            opacity: 0.9;
+        }
+
+        .btn-ig {
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+        }
+
+        .btn-email {
+            background-color: #ea4335;
         }
     </style>
 </head>
 <body>
 
     <div class="portfolio-card">
-        <!-- ส่วนหัวและรูปโปรไฟล์ -->
-        <div class="header">
-            <img src="Lamine yamal.jpg" alt="รูปโปรไฟล์ พีรภัทร" class="profile-img">
-            <h1>นายพีรภัทร โนนใหญ่</h1>
-            <p>คณะเทคโนโลยีสารสนเทศ สาขานวัตกรรมดิจิทัล</p>
+        <div class="header-bg"></div>
+        
+        <div class="profile-container">
+            <!-- แนะนำให้ดาวน์โหลดรูปจาก Pinterest มาตั้งชื่อว่า profile.jpg แล้วไว้ในโฟลเดอร์เดียวกับไฟล์นี้ -->
+            <img src="profile.jpg" alt="รูปโปรไฟล์ พีรภัทร" class="profile-pic" onerror="this.src='https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png'">
         </div>
 
-        <!-- ส่วนเนื้อหาข้อมูล -->
         <div class="content">
-            <!-- ส่วนการศึกษา -->
-            <div class="section">
-                <h2>🎓 ข้อมูลการศึกษา</h2>
-                <ul class="info-list">
-                    <li>ปัจจุบันกำลังศึกษาอยู่ที่คณะเทคโนโลยีสารสนเทศ</li>
-                    <li><strong>สาขาวิชา:</strong> นวัตกรรมดิจิทัล</li>
-                </ul>
+            <h1>นายพีรภัทร โนนใหญ่</h1>
+            <div class="faculty">
+                <i class="fa-solid fa-graduation-cap"></i> คณะเทคโนโลยีสารสนเทศ<br>สาขานวัตกรรมดิจิทัล
             </div>
 
-            <!-- ส่วนความสามารถ -->
-            <div class="section">
-                <h2>⚽ ความสามารถพิเศษ</h2>
-                <ul class="info-list">
-                    <li><span class="emoji">🏃‍♂️</span> เล่นกีฬาฟุตซอล (Futsal)</li>
-                    <li><span class="emoji">⚽</span> เล่นกีฬาฟุตบอล (Football)</li>
-                </ul>
+            <div class="section-title">ความสามารถ / กีฬา</div>
+            <div class="list-items">
+                <div class="badge"><i class="fa-solid fa-futbol text-blue-500"></i> เตะฟุตซอล</div>
+                <div class="badge"><i class="fa-regular fa-futbol"></i> เตะฟุตบอล</div>
             </div>
 
-            <!-- ส่วนงานอดิเรก -->
-            <div class="section">
-                <h2>🎮 งานอดิเรก (Hobbies)</h2>
-                <ul class="info-list">
-                    <li><span class="emoji">👾</span> เล่นเกม (Gaming)</li>
-                    <li><span class="emoji">💤</span> นอนหลับพักผ่อน (Sleeping)</li>
-                </ul>
+            <div class="section-title">งานอดิเรก</div>
+            <div class="list-items">
+                <div class="badge"><i class="fa-solid fa-gamepad"></i> เล่นเกม</div>
+                <div class="badge"><i class="fa-solid fa-bed"></i> นอนพักผ่อน</div>
+            </div>
+
+            <div class="contact-info">
+                <a href="https://instagram.com/dxww_p" target="_blank" class="contact-btn btn-ig">
+                    <i class="fa-brands fa-instagram fa-lg"></i> IG: dxww_p
+                </a>
+                <a href="mailto:peerapat.non@spumail.net" class="contact-btn btn-email">
+                    <i class="fa-solid fa-envelope fa-lg"></i> peerapat.non@spumail.net
+                </a>
             </div>
         </div>
     </div>
